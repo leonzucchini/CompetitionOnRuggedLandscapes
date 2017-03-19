@@ -7,12 +7,17 @@ set.seed(0)
 
 # Load libraries and config files
 library(matlab)
-source("config.r")
-source("crl_simulation.r")
-source("crl_analysis.r")
+
+# Load configuration
+source("crl_config.r")
 
 # Run simulation and store results
+source("crl_simulation.r")
 simulate()
 
 # Load simulation results and analyze
+source("crl_analysis.r")
 analyse(simulation.results.name)
+
+# Clear up
+file.remove(simulation.results.name)

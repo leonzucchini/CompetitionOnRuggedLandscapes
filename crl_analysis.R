@@ -1,6 +1,5 @@
 # COMPETITION ON RUGGED LANDSCAPES
-# ANALYSIS
-# v14
+# ANALYSIS v14
 
 analyse <- function(simulation.results.name){
   
@@ -162,7 +161,7 @@ analyse <- function(simulation.results.name){
   # >>> PLOT FIGURE 2
   # ///////////////////////////
   
-  win.metafile("Figure2_Competition on Smooth Landscapes.wmf")
+  pdf("Figure2_Competition on Smooth Landscapes.pdf", pointsize = 10)
   par(mfrow=c(2,2),las=1, family="serif", oma=c(0,0,0,0))
   id.k = 1
   
@@ -329,7 +328,7 @@ analyse <- function(simulation.results.name){
   # >>> PLOT FIGURE 3
   # ///////////////////////////
   
-  win.metafile("Figure3_Competition on Rugged Landscapes.wmf")
+  pdf("Figure3_Competition on Rugged Landscapes.pdf", pointsize = 10)
   par(mfrow=c(2,2),las=1, family="serif", oma=c(0,0,0,0))
   
   # >>> FIGURE 3A: Average performance in final period over j and k

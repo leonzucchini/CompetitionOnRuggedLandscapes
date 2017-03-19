@@ -71,7 +71,7 @@ simulate <- function(){
           prices = rep(1L,J) #initial price for firms
           payoffs = FunctionPayoffs(J, locations, prices, Alpha, tau, distances, customer.mass) #calculate payoffs
           new.positions = NA
-          
+      
           # Store location, prices, and payoffs results
           rst[ind.store,1] = rep(J, J)
           rst[ind.store,2] = rep(t, J)
@@ -113,6 +113,6 @@ simulate <- function(){
   # -------------------------------------------------
   # STORE RESULTS
   rst = rst[is.na(rst[,1])==FALSE,] #remove empty rows
-  save(list = ls(), file = simulation.results.name)
+  save(rst, lst, distances, file = simulation.results.name)
   print("Simulation complete")
 }

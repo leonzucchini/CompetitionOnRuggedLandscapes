@@ -1,11 +1,17 @@
 # COMPETITION ON RUGGED LANDSCAPES
 # CONFIGURATION FILE 
 
+# -------------------------------------------------
+# SETUP
+
 # Set WD
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #note this only works in RStudio
 
 # Storage for simulation results
 simulation.results.name = paste("SimulationResults_",Sys.Date(),".r",sep="")
+
+# -------------------------------------------------
+# MODEL PARAMETERS
 
 # Define tunable parameters (these are the ones changed and compared in the simulation)
 K.values = 0:9                          # interactions in landscape
@@ -15,8 +21,8 @@ Tau = length(Tau.values)                # number of tau values
 J.values = c(1,2,4,8)                   # number of firms in the landscape
 
 # Define landscape and simulation parameters
-S = 10                                 # number of simulation runs
-T = 20                                  # number of periods
+S = 1000                                # number of simulation runs
+T = 80                                  # number of periods
 N = 10                                  # size (dimensionality) of landscape
 LN = 2^N                                # length of landscape
 
